@@ -4,10 +4,10 @@ metadata:
   name: podinfo-deploy
   namespace: podinfo
 spec:
-  interval: 1m0s
-  path: ./flux
-  prune: false
-  serviceAccountName: podinfo
+  interval: 2m0s
+  path: ./flux/staging
+  prune: true
   sourceRef:
     kind: GitRepository
     name: podinfo-deploy
+  targetNamespace: podinfo
