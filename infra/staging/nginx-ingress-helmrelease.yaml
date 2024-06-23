@@ -1,0 +1,15 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: nginx-ingress
+  namespace: flux-system
+spec:
+  values:
+    controller:
+      defaultBackend:
+        enabled: true
+      service: 
+        type: LoadBalancer
+      admissionWebhooks:
+        enabled: false

@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: podinfo-deploy
+  namespace: podinfo
+spec:
+  interval: 1m0s
+  ref:
+    branch: main
+  url: https://github.com/yourusername/podinfo-deploy.git
